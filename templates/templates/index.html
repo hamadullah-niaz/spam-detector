@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Spam Detector</h2>
+
+<form action="/predict" method="post">
+    <input type="text" name="message" style="width: 300px;">
+    <button type="submit">Check</button>
+</form>
+{% if prediction_text %}
+    <h3>Result: {{ prediction_text}}</h3>
+    <p>Confidence: {{ probability }}</p>
+{% endif %}
+</body>
+</html>
